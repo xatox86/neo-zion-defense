@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';
+const b=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});const p=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});await p.goto((process.env.ZION_URL || 'http://localhost:5173/neo-zion-defense/'),{waitUntil:'networkidle'});await p.locator('#play').tap();await p.waitForTimeout(1000);await p.screenshot({path:'screenshots/empty-map.png'});await b.close();
