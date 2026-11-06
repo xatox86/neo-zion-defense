@@ -5,7 +5,7 @@ export type EnemyPose={type:string;progress:number;hit:number;hp:number;max:numb
 export class RiggedActors {
  parts=new Image(); george=new Image();
  constructor(){this.setQuality(true)}
- setQuality(high:boolean){this.parts.src=import.meta.env.BASE_URL+'assets/'+(high?'rig-parts.png':'rig-parts-low.webp');this.george.src=import.meta.env.BASE_URL+'assets/'+(high?'quaternius-george-atlas.png':'quaternius-george-atlas-low.webp')}
+ setQuality(high:boolean){this.parts.src=import.meta.env.BASE_URL+'assets/'+(high?'rig-parts.webp':'rig-parts-low.webp');this.george.src=import.meta.env.BASE_URL+'assets/'+(high?'quaternius-george-atlas.png':'quaternius-george-atlas-low.webp')}
  private part(c:CanvasRenderingContext2D,col:number,row:number,x:number,y:number,w:number,h:number,angle=0,flip=false){if(!this.parts.naturalWidth)return;c.save();c.translate(x,y);c.rotate(angle);if(flip)c.scale(-1,1);const sw=this.parts.naturalWidth/4,sh=this.parts.naturalHeight/2;c.drawImage(this.parts,col*sw,row*sh,sw,sh,-w/2,-h/2,w,h);c.restore()}
  private shadow(c:CanvasRenderingContext2D,x:number,y:number,r:number){c.save();c.fillStyle='#000b';c.beginPath();c.ellipse(x,y,r,r*.30,0,0,7);c.fill();c.restore()}
  tower(c:CanvasRenderingContext2D,x:number,y:number,w:number,t:TowerPose,time:number,quality:boolean){const size=w*.17;this.shadow(c,x,y+3,size*.44);c.save();c.translate(x,y);
