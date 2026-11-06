@@ -18,3 +18,10 @@ export function drawGates(c:CanvasRenderingContext2D,path:readonly P[],pads:read
  // Small ambient steam and synchronized warning beacons, deliberately bounded.
  if(quality){c.save();for(let i=0;i<4;i++){const x=w*(.06+i*.27),y=h*(.24+(i%2)*.32),phase=(time*.17+i*.23)%1;c.globalAlpha=(1-phase)*.15;c.fillStyle='#a3d6c7';c.beginPath();c.ellipse(x+Math.sin(time+i)*4,y-phase*30,3+phase*8,5+phase*12,0,0,7);c.fill()}c.restore()}
 }
+/** Markers sit on the integrated illustrated foundations; geometry and interaction share these coordinates. */
+export function drawIntegratedMarkers(c:CanvasRenderingContext2D,path:readonly P[],pads:readonly P[],w:number,h:number,selected:number,built:ReadonlySet<number>,time:number,quality:boolean){
+ for(let i=0;i<pads.length;i++){const x=pads[i][0]*w,y=pads[i][1]*h,r=w*.029;c.save();c.translate(x,y);c.strokeStyle=i===selected?'#adffdd':'#74f9d0';c.globalAlpha=i===selected?.95:.65;c.lineWidth=i===selected?2:1;c.shadowColor='#64ffd0';c.shadowBlur=quality?8:0;c.beginPath();c.ellipse(0,0,r,r*.50,0,0,Math.PI*2);c.stroke();if(!built.has(i)){c.fillStyle='#c5fff0';c.font=`bold ${Math.max(14,w*.027)}px sans-serif`;c.textAlign='center';c.textBaseline='middle';c.fillText('+',0,0)}c.restore()}
+ // The signal traces follow the real route; they are guidance, not road geometry.
+ c.save();c.strokeStyle='#ffbe68';c.globalAlpha=.45;c.lineWidth=1.3;c.setLineDash([4,14]);c.lineDashOffset=-time*6;c.beginPath();path.forEach((p,i)=>i?c.lineTo(p[0]*w,p[1]*h):c.moveTo(p[0]*w,p[1]*h));c.stroke();c.restore();
+ if(quality){c.save();for(let i=0;i<3;i++){const phase=(time*.12+i*.35)%1,x=w*(.04+i*.43),y=h*(.36+i*.18);c.globalAlpha=(1-phase)*.08;c.fillStyle='#cffcf0';c.beginPath();c.ellipse(x+Math.sin(time+i)*3,y-phase*18,3+phase*7,4+phase*10,0,0,7);c.fill()}c.restore()}
+}
