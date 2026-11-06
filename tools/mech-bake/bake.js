@@ -1,0 +1,11 @@
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const size=160,cols=8,clips=['Idle','Shoot','HitRecieve_1','Death'];
+const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true});renderer.setSize(size,size);renderer.setPixelRatio(1);renderer.setClearColor(0x000000,0);renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.append(renderer.domElement);
+const scene=new THREE.Scene();scene.add(new THREE.HemisphereLight(0xb4eeef,0x26302f,2.0));const key=new THREE.DirectionalLight(0xffd8ae,2.2);key.position.set(5,8,5);scene.add(key);const rim=new THREE.DirectionalLight(0x45f6e4,2);rim.position.set(-5,4,-5);scene.add(rim);
+const gltf=await new GLTFLoader().loadAsync('./George.gltf');const object=gltf.scene;scene.add(object);object.traverse(o=>{if(o.isMesh&&o.material){const mats=Array.isArray(o.material)?o.material:[o.material];for(const m of mats){if(m.color)m.color.multiply(new THREE.Color(0xb0b4ad));if('metalness' in m)m.metalness=.55;if('roughness' in m)m.roughness=.5}}});
+const box=new THREE.Box3().setFromObject(object),size3=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const extent=Math.max(size3.x,size3.y,size3.z)*1.65;const camera=new THREE.OrthographicCamera(-extent/2,extent/2,extent/2,-extent/2,.01,1000);camera.position.copy(center).add(new THREE.Vector3(4,3.2,5).normalize().multiplyScalar(extent*3));camera.lookAt(center);camera.updateProjectionMatrix();
+const mixer=new THREE.AnimationMixer(object),atlas=document.createElement('canvas');atlas.width=size*cols;atlas.height=size*clips.length;const ctx=atlas.getContext('2d');const metadata=[];
+for(let row=0;row<clips.length;row++){const clip=THREE.AnimationClip.findByName(gltf.animations,clips[row]);if(!clip)throw Error('Missing clip '+clips[row]);const action=mixer.clipAction(clip);action.reset().play();action.paused=true;for(let frame=0;frame<cols;frame++){action.time=clip.duration*frame/cols;mixer.update(0);renderer.render(scene,camera);ctx.drawImage(renderer.domElement,frame*size,row*size,size,size)}action.stop();metadata.push({name:clips[row],duration:clip.duration,frames:cols,row})}
+window.bakeResult={png:atlas.toDataURL('image/png'),metadata,modelSize:size3.toArray(),animationNames:gltf.animations.map(a=>a.name)};document.title='READY';
+

@@ -1,0 +1,30 @@
+{
+  "cell": 160,
+  "columns": 8,
+  "clips": [
+    {
+      "name": "Idle",
+      "duration": 3.3333332538604736,
+      "frames": 8,
+      "row": 0
+    },
+    {
+      "name": "Shoot",
+      "duration": 0.5,
+      "frames": 8,
+      "row": 1
+    },
+    {
+      "name": "HitRecieve_1",
+      "duration": 0.46666666865348816,
+      "frames": 8,
+      "row": 2
+    },
+    {
+      "name": "Death",
+      "duration": 1.4333332777023315,
+      "frames": 8,
+      "row": 3
+    }
+  ]
+}
