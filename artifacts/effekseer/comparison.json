@@ -1,0 +1,27 @@
+{
+  "environment": "Desktop Chrome emulating 390x844 mobile, software/hardware depends on host; 24 synthetic persistent effects, not an iPhone",
+  "results": [
+    {
+      "mode": "baseline",
+      "fps": 59.84208685223127,
+      "heapStart": 10232285,
+      "heapEnd": 11101826,
+      "seconds": 8.0044,
+      "canvas": [
+        600,
+        850
+      ]
+    },
+    {
+      "mode": "effekseer-sprites",
+      "fps": 60.09645418428486,
+      "heapStart": 10249181,
+      "heapEnd": 10802677,
+      "seconds": 8.00379999999702,
+      "canvas": [
+        600,
+        850
+      ]
+    }
+  ]
+}
