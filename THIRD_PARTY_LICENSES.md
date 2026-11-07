@@ -7,7 +7,7 @@
 - Official page: https://quaternius.com/packs/animatedmech
 - Source used when the author's Google Drive download returned quota exceeded: https://github.com/agentkaerf/FreeModels/tree/main/Animated%20Mech%20Pack%20-%20March%202021/Textured/glTF
 - Package license file: https://raw.githubusercontent.com/agentkaerf/FreeModels/main/Animated%20Mech%20Pack%20-%20March%202021/License.txt
-- Retrieved 2026-11-06/07; SHA-256 of source glTF: `eccc45d82701f32d67b4480346757b1656c649d9d40e4a1484f57d660596285e`. `tools/mech-bake/George.gltf` retains the source. `public/assets/quaternius-george-atlas.png` contains frames rendered from Idle, Shoot, HitRecieve_1, and Death, using a fixed orthographic camera and adapted lighting/material settings. The gameplay currently triggers Idle and Shoot; towers cannot take damage or die in the existing rules.
+- Retrieved 2026-11-06/07; SHA-256 of source glTF: `eccc45d82701f32d67b4480346757b1656c649d9d40e4a1484f57d660596285e`. `tools/mech-bake/George.gltf` retains the source. `public/assets/quaternius-george-atlas.png` contains frames rendered from Idle, Shoot, HitRecieve_1, and Death, using a fixed orthographic camera and adapted lighting/material settings. The current gameplay uses a separately articulated original mech rig for Idle and Shoot; the George atlas and its source remain available for future use and are not used by the current gameplay renderer. Towers cannot take damage or die in the existing rules.
 
 ## Three.js
 
@@ -16,3 +16,7 @@ Three.js is a development dependency used by `tools/mech-bake` to render the mod
 ## Original assets
 
 `public/assets/rig-parts.png` was created for this branch using the built-in image generator. The spider and octopus limbs are procedurally assembled and animated in `src/game/RiggedActors.ts`; this is a project-specific implementation, not Rigby2D.
+
+## Generated artwork
+
+`public/assets/rig-parts.png`, `tower-parts*.webp`, `machine-parts*.webp`, and `terrain-*.webp` are original project artwork generated with the built-in image generator and adapted for the game. The tower and machine part source sheets are preserved in `tools/source-art/`. The terrain artwork was generated using the project map guides and the user-provided industrial Zion reference. Game objects are assembled and animated in `src/game/RiggedActors.ts`.
