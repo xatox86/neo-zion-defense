@@ -1,0 +1,27 @@
+{
+  "environment": "Desktop Chrome, emulated 390x844, seeded 8 advanced towers, JS heap only, no iPhone",
+  "results": [
+    {
+      "quality": "high",
+      "fps": 59.60935254491254,
+      "startHeap": 10485165,
+      "endHeap": 4982475,
+      "maxEnemies": 4,
+      "canvas": [
+        600,
+        850
+      ]
+    },
+    {
+      "quality": "low",
+      "fps": 29.974896024490153,
+      "startHeap": 5706780,
+      "endHeap": 6314710,
+      "maxEnemies": 4,
+      "canvas": [
+        360,
+        510
+      ]
+    }
+  ]
+}

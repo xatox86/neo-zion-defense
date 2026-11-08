@@ -12,8 +12,9 @@ export const towers = [
 ] as const;
 /** One source of truth for combat, upgrade cost and the tower panel. */
 export const MAX_TOWER_LEVEL=5;
-export function upgradeCost(type:number,currentLevel:number){return Math.round(towers[type].price*([.9,1.8,2.4,3.1][currentLevel-1]??0))}
-export function towerStats(type:number,level:number){const n=Math.max(1,Math.min(MAX_TOWER_LEVEL,level))-1,t=towers[type];return {damage:t.damage*[1,1.8,2.6,3.4,4.3][n],rate:t.rate*[1,.97,.94,.91,.88][n],range:t.range*[1,1.02,1.04,1.06,1.08][n],slow:1.8+n*.2}}
+export function upgradeCost(type:number,currentLevel:number){const factors=type===1?[.9,1.8,2.5,3.35]:[.9,1.8,2.4,3.1];return Math.round(towers[type].price*(factors[currentLevel-1]??0))}
+export function towerStats(type:number,level:number){const n=Math.max(1,Math.min(MAX_TOWER_LEVEL,level))-1,t=towers[type];const damage=type===1?[1,1.8,2.6,3.2,4.0]:[1,1.8,2.6,3.4,4.3],rate=type===1?[1,.97,.94,.96,.90]:[1,.97,.94,.91,.88];return {damage:t.damage*damage[n],rate:t.rate*rate[n],range:t.range*[1,1.02,1.04,1.06,1.08][n],slow:1.8+n*.2}}
+export function teslaTargets(level:number){return [3,5,7,7,9][Math.max(1,Math.min(5,level))-1]}
 export const enemyTypes = {
  scout:{name:'Разведчик',hp:65,speed:.105,armor:0,reward:14,damage:1}, swarm:{name:'Рой',hp:38,speed:.12,armor:0,reward:8,damage:1}, armored:{name:'Броневик',hp:220,speed:.058,armor:.38,reward:25,damage:3}, jammer:{name:'Глушитель',hp:150,speed:.07,armor:.1,reward:21,damage:2}, octopus:{name:'Спрут',hp:300,speed:.075,armor:.12,reward:34,damage:3}, carrier:{name:'Носитель',hp:400,speed:.055,armor:.18,reward:38,damage:4}, boss:{name:'СЕРДЦЕ МАШИН',hp:1600,speed:.035,armor:.35,reward:150,damage:12}
 } as const;
