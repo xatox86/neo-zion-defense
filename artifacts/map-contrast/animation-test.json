@@ -1,0 +1,115 @@
+{
+  "tower": [
+    {
+      "type": 0,
+      "level": 1,
+      "pixels": 8841
+    },
+    {
+      "type": 0,
+      "level": 2,
+      "pixels": 8278
+    },
+    {
+      "type": 0,
+      "level": 3,
+      "pixels": 8268
+    },
+    {
+      "type": 1,
+      "level": 1,
+      "pixels": 1471
+    },
+    {
+      "type": 1,
+      "level": 2,
+      "pixels": 1536
+    },
+    {
+      "type": 1,
+      "level": 3,
+      "pixels": 2360
+    },
+    {
+      "type": 2,
+      "level": 1,
+      "pixels": 8009
+    },
+    {
+      "type": 2,
+      "level": 2,
+      "pixels": 7787
+    },
+    {
+      "type": 2,
+      "level": 3,
+      "pixels": 8159
+    },
+    {
+      "type": 3,
+      "level": 1,
+      "pixels": 4174
+    },
+    {
+      "type": 3,
+      "level": 2,
+      "pixels": 5132
+    },
+    {
+      "type": 3,
+      "level": 3,
+      "pixels": 5334
+    }
+  ],
+  "enemy": [
+    {
+      "type": "scout",
+      "motion": 73,
+      "hit": 772,
+      "death": 2041,
+      "attack": 182
+    },
+    {
+      "type": "swarm",
+      "motion": 632,
+      "hit": 557,
+      "death": 2136,
+      "attack": 139
+    },
+    {
+      "type": "armored",
+      "motion": 807,
+      "hit": 770,
+      "death": 3045,
+      "attack": 180
+    },
+    {
+      "type": "jammer",
+      "motion": 1026,
+      "hit": 772,
+      "death": 2224,
+      "attack": 177
+    },
+    {
+      "type": "octopus",
+      "motion": 5195,
+      "hit": 1011,
+      "death": 6359,
+      "attack": 223
+    },
+    {
+      "type": "carrier",
+      "motion": 104,
+      "hit": 1609,
+      "death": 5912,
+      "attack": 345
+    },
+    {
+      "type": "boss",
+      "motion": 9646,
+      "hit": 3014,
+      "death": 23914,
+      "attack": 627
+    }
+  ]
+}

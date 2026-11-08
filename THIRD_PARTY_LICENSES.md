@@ -20,3 +20,6 @@ Three.js is a development dependency used by `tools/mech-bake` to render the mod
 ## Generated artwork
 
 `public/assets/rig-parts.png`, `tower-parts*.webp`, `machine-parts*.webp`, and `terrain-*.webp` are original project artwork generated with the built-in image generator and adapted for the game. The tower and machine part source sheets are preserved in `tools/source-art/`. The terrain artwork was generated using the project map guides and the user-provided industrial Zion reference. Game objects are assembled and animated in `src/game/RiggedActors.ts`.
+## Map contrast and EMP dome artwork (2026-11)
+
+The separate `terrain-*-cold.webp` maps and `emp-dome-{1,2,3}.webp` sprites were generated for this project with the built-in image generator, using the prior terrain and the user-supplied `references/underground-zion-five-maps.png` as visual references. The map route and existing pad IDs remain unchanged. The port and crystal-cavern panels in the reference are kept for future levels.
