@@ -10,6 +10,10 @@ export const towers = [
  {name:'ЭМИ-купол',short:'ЭМИ',price:150,damage:7,rate:1.35,range:.20,color:'#58ffcf'},
  {name:'Рельсотрон',short:'РЕЛЬС',price:200,damage:110,rate:2.7,range:.38,color:'#a4efff'}
 ] as const;
+/** One source of truth for combat, upgrade cost and the tower panel. */
+export const MAX_TOWER_LEVEL=5;
+export function upgradeCost(type:number,currentLevel:number){return Math.round(towers[type].price*([.9,1.8,2.4,3.1][currentLevel-1]??0))}
+export function towerStats(type:number,level:number){const n=Math.max(1,Math.min(MAX_TOWER_LEVEL,level))-1,t=towers[type];return {damage:t.damage*[1,1.8,2.6,3.4,4.3][n],rate:t.rate*[1,.97,.94,.91,.88][n],range:t.range*[1,1.02,1.04,1.06,1.08][n],slow:1.8+n*.2}}
 export const enemyTypes = {
  scout:{name:'Разведчик',hp:65,speed:.105,armor:0,reward:14,damage:1}, swarm:{name:'Рой',hp:38,speed:.12,armor:0,reward:8,damage:1}, armored:{name:'Броневик',hp:220,speed:.058,armor:.38,reward:25,damage:3}, jammer:{name:'Глушитель',hp:150,speed:.07,armor:.1,reward:21,damage:2}, octopus:{name:'Спрут',hp:300,speed:.075,armor:.12,reward:34,damage:3}, carrier:{name:'Носитель',hp:400,speed:.055,armor:.18,reward:38,damage:4}, boss:{name:'СЕРДЦЕ МАШИН',hp:1600,speed:.035,armor:.35,reward:150,damage:12}
 } as const;

@@ -23,3 +23,6 @@ Three.js is a development dependency used by `tools/mech-bake` to render the mod
 ## Map contrast and EMP dome artwork (2026-11)
 
 The separate `terrain-*-cold.webp` maps and `emp-dome-{1,2,3}.webp` sprites were generated for this project with the built-in image generator, using the prior terrain and the user-supplied `references/underground-zion-five-maps.png` as visual references. The map route and existing pad IDs remain unchanged. The port and crystal-cavern panels in the reference are kept for future levels.
+## Elite tower components (2026-11)
+
+`public/assets/elite-{mech,tesla,emp,rail}*.webp` were generated for this project using the built-in image generator with the project's existing tower components as visual references. Full-resolution generated source layers are preserved in `tools/source-art/elite-*.png`; the four new layers are assembled with independently animated existing rig parts in `src/game/RiggedActors.ts`.

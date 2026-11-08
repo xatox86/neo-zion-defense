@@ -1,0 +1,35 @@
+{
+  "environment": "Desktop Chrome, emulated mobile viewport; not an iPhone",
+  "results": [
+    {
+      "quality": "high",
+      "frames": 476,
+      "seconds": 8.0052,
+      "rafFps": 59.46135012242043,
+      "drawFps": 59.46135012242043,
+      "startHeap": 10230442,
+      "endHeap": 11590584,
+      "maxEnemies": 13,
+      "canvas": [
+        600,
+        850
+      ],
+      "adaptive30": false
+    },
+    {
+      "quality": "low",
+      "frames": 481,
+      "seconds": 8.008500000023842,
+      "rafFps": 60.06118499076831,
+      "drawFps": 30.093026159615725,
+      "startHeap": 5347985,
+      "endHeap": 6090783,
+      "maxEnemies": 13,
+      "canvas": [
+        360,
+        510
+      ],
+      "adaptive30": false
+    }
+  ]
+}
