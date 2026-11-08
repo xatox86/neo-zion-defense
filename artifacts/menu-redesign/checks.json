@@ -1,0 +1,206 @@
+[
+  {
+    "width": 360,
+    "height": 740,
+    "compact": 0,
+    "layout": {
+      "app": {
+        "top": 0,
+        "bottom": 740,
+        "width": 360
+      },
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "els": [
+        {
+          "q": ".menu-top",
+          "top": 8,
+          "bottom": 56,
+          "left": 18,
+          "right": 342
+        },
+        {
+          "q": ".hero h1",
+          "top": 236.078125,
+          "bottom": 313.234375,
+          "left": 100.140625,
+          "right": 259.84375
+        },
+        {
+          "q": ".map-select",
+          "top": 508,
+          "bottom": 634,
+          "left": 18,
+          "right": 342
+        },
+        {
+          "q": "#play",
+          "top": 648,
+          "bottom": 702,
+          "left": 18,
+          "right": 342
+        }
+      ]
+    },
+    "settings": {
+      "sound": true,
+      "vibration": true,
+      "quality": false,
+      "unlocked": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "compact": 0,
+    "layout": {
+      "app": {
+        "top": 0,
+        "bottom": 844,
+        "width": 390
+      },
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "els": [
+        {
+          "q": ".menu-top",
+          "top": 8,
+          "bottom": 56,
+          "left": 18,
+          "right": 372
+        },
+        {
+          "q": ".hero h1",
+          "top": 286.21875,
+          "bottom": 369.09375,
+          "left": 108.453125,
+          "right": 281.53125
+        },
+        {
+          "q": ".map-select",
+          "top": 612,
+          "bottom": 738,
+          "left": 18,
+          "right": 372
+        },
+        {
+          "q": "#play",
+          "top": 752,
+          "bottom": 806,
+          "left": 18,
+          "right": 372
+        }
+      ]
+    },
+    "settings": {
+      "sound": true,
+      "vibration": true,
+      "quality": false,
+      "unlocked": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "compact": 0,
+    "layout": {
+      "app": {
+        "top": 0,
+        "bottom": 932,
+        "width": 430
+      },
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "els": [
+        {
+          "q": ".menu-top",
+          "top": 8,
+          "bottom": 56,
+          "left": 18,
+          "right": 412
+        },
+        {
+          "q": ".hero h1",
+          "top": 326.40625,
+          "bottom": 417.90625,
+          "left": 119.578125,
+          "right": 310.40625
+        },
+        {
+          "q": ".map-select",
+          "top": 700,
+          "bottom": 826,
+          "left": 18,
+          "right": 412
+        },
+        {
+          "q": "#play",
+          "top": 840,
+          "bottom": 894,
+          "left": 18,
+          "right": 412
+        }
+      ]
+    },
+    "settings": {
+      "sound": true,
+      "vibration": true,
+      "quality": false,
+      "unlocked": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "compact": 480,
+    "layout": {
+      "app": {
+        "top": 0,
+        "bottom": 480,
+        "width": 390
+      },
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "els": [
+        {
+          "q": ".menu-top",
+          "top": 8,
+          "bottom": 56,
+          "left": 18,
+          "right": 372
+        },
+        {
+          "q": ".hero h1",
+          "top": 85,
+          "bottom": 151.28125,
+          "left": 125.765625,
+          "right": 264.234375
+        },
+        {
+          "q": ".map-select",
+          "top": 205.28125,
+          "bottom": 277.28125,
+          "left": 18,
+          "right": 372
+        },
+        {
+          "q": "#play",
+          "top": 291.28125,
+          "bottom": 345.28125,
+          "left": 18,
+          "right": 372
+        }
+      ]
+    },
+    "settings": {
+      "sound": true,
+      "vibration": true,
+      "quality": false,
+      "unlocked": 0
+    },
+    "errors": []
+  }
+]
