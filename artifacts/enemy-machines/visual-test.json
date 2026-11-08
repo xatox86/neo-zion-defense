@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "type": "scout",
+      "motion": 4442,
+      "turn": 2919,
+      "hit": 1397,
+      "death": 1207
+    },
+    {
+      "type": "swarm",
+      "motion": 3819,
+      "turn": 3611,
+      "hit": 797,
+      "death": 384
+    },
+    {
+      "type": "armored",
+      "motion": 3040,
+      "turn": 4036,
+      "hit": 1199,
+      "death": 423
+    },
+    {
+      "type": "jammer",
+      "motion": 5167,
+      "turn": 3420,
+      "hit": 1188,
+      "death": 734
+    },
+    {
+      "type": "octopus",
+      "motion": 8227,
+      "turn": 6737,
+      "hit": 1424,
+      "death": 735
+    },
+    {
+      "type": "carrier",
+      "motion": 7257,
+      "turn": 5567,
+      "hit": 2416,
+      "death": 1082
+    },
+    {
+      "type": "boss",
+      "motion": 19538,
+      "turn": 14999,
+      "hit": 3450,
+      "death": 11801
+    }
+  ],
+  "bossPhase12": 9090,
+  "bossPhase23": 10410
+}
