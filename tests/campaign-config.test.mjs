@@ -8,7 +8,7 @@ test('campaign IDs, legacy map indices, wave counts and technology caps are stab
  assert.deepEqual(campaignMissions.slice(0,3).map(m=>m.id),['gates','energy','heart']);
  assert.equal(new Set(campaignMissions.map(m=>m.id)).size,5);
  assert.deepEqual(campaignMissions.map(m=>m.waves),[15,17,20,22,24]);
- assert.deepEqual(campaignMissions.map(m=>m.maxTowerLevel),[3,3,3,3,3]);
+ assert.deepEqual(campaignMissions.map(m=>m.maxTowerLevel),[2,2,2,4,5]);
  assert.equal(survivalMode.maxTowerLevel,5);
  assert.equal(survivalMode.bossInterval,10);
  assert.ok(!campaignMissions.some(m=>m.id===survivalMode.id));
