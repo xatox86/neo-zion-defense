@@ -1,0 +1,110 @@
+[
+  {
+    "map": 0,
+    "state": {
+      "earlyReady": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "ready": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "icons": [
+        6114,
+        6114,
+        6126,
+        6127
+      ],
+      "levels": [
+        4,
+        5,
+        4,
+        5
+      ]
+    },
+    "errors": []
+  },
+  {
+    "map": 1,
+    "state": {
+      "earlyReady": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "ready": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "icons": [
+        6114,
+        6114,
+        6126,
+        6127
+      ],
+      "levels": [
+        4,
+        5,
+        4,
+        5
+      ]
+    },
+    "errors": []
+  },
+  {
+    "map": 2,
+    "state": {
+      "earlyReady": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "ready": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "icons": [
+        6114,
+        6114,
+        6126,
+        6127
+      ],
+      "levels": [
+        4,
+        5,
+        4,
+        5
+      ]
+    },
+    "errors": []
+  }
+]

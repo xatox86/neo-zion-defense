@@ -4,6 +4,9 @@
 
 .camera-reset{position:absolute;right:8px;top:4px;width:44px;height:44px;border:1px solid #66c8ad;border-radius:8px;background:#082321e8;color:#a8ffe1;font-size:23px;z-index:2}.context:not([hidden])~.camera-reset{bottom:60px}
 
+/* Arsenal thumbnails are rendered from the same components as purchased towers. */
+canvas.tower-icon{width:52px;height:39px;background:none;pointer-events:none;touch-action:auto}
+
 .map-card[data-map="0"]{background-image:linear-gradient(0deg,#071918f5,#0a1d1dbb),var(--gates-art);background-size:cover;background-position:center}.map-card[data-map="0"].chosen{background-image:linear-gradient(0deg,#09251df2,#0b3a2ab0),var(--gates-art)}
 
 /* Cinematic menu: the artwork is scenery only; every control remains HTML. */

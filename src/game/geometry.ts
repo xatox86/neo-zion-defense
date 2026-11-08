@@ -12,7 +12,7 @@ export function railAim(size:number,level:number,barrel:number,dx:number,dy:numb
 }
 /** Coordinates relative to a tower's ground contact point in canvas pixels. */
 export function mechMuzzle(size:number,angle:number,flash:number,level:number){
- if(level<=3)return {x:size*(.22+.45*Math.cos(angle)),y:size*(-.45+.45*.65*Math.sin(angle))};
+ if(level<=3){const reach=.45-.035*Math.max(0,Math.min(1,flash/.16));return {x:size*(.22+reach*Math.cos(angle)),y:size*(-.45+reach*.65*Math.sin(angle))};}
  const pivot=level===4?{x:.25,y:-.51}:{x:0,y:-.35},reach=level===4?.39:.57,lateral=level===4?.12:-.13;
  const recoil=.04*Math.max(0,Math.min(1,flash/.16)),forward=reach-recoil;
  return {x:size*(pivot.x+Math.cos(angle)*forward-Math.sin(angle)*lateral),y:size*(pivot.y+Math.sin(angle)*forward+Math.cos(angle)*lateral)};
