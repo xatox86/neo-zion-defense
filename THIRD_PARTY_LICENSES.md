@@ -1,5 +1,9 @@
 # Third-party assets and tools
 
+## Menu libraries
+
+The campaign menu uses augmented-ui (BSD 2-Clause, `licenses/augmented-ui.txt`), Motion (MIT, `licenses/motion.md`) and Cyberpunk UI button CSS (MIT, `licenses/cyberpunk-ui.txt`).
+
 ## Animated Mech Pack — George
 
 - Author: Quaternius; release March 2021.
