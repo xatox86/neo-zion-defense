@@ -1,12 +1,12 @@
 /** Stable campaign identifiers preserve the map indexes used by existing saves. */
 export type MissionId = 'gates'|'energy'|'heart'|'omega'|'docks';
-export type CampaignMission = Readonly<{id:MissionId;legacyIndex:number;name:string;waves:number;healthGrowth:number;maxTowerLevel:2|4|5}>;
+export type CampaignMission = Readonly<{id:MissionId;legacyIndex:number;name:string;waves:number;healthGrowth:number;maxTowerLevel:3|4|5}>;
 
 /** Campaign rules only; playable map geometry and encounters must be supplied separately. */
 export const campaignMissions:readonly CampaignMission[] = [
- {id:'gates',legacyIndex:0,name:'Врата Зиона',waves:15,healthGrowth:.085,maxTowerLevel:2},
- {id:'energy',legacyIndex:1,name:'Энергосектор',waves:17,healthGrowth:.075,maxTowerLevel:2},
- {id:'heart',legacyIndex:2,name:'Сердце города',waves:20,healthGrowth:.045,maxTowerLevel:2},
+ {id:'gates',legacyIndex:0,name:'Врата Зиона',waves:15,healthGrowth:.085,maxTowerLevel:3},
+ {id:'energy',legacyIndex:1,name:'Энергосектор',waves:17,healthGrowth:.075,maxTowerLevel:3},
+ {id:'heart',legacyIndex:2,name:'Сердце города',waves:20,healthGrowth:.045,maxTowerLevel:3},
  {id:'omega',legacyIndex:3,name:'Шахта Омега',waves:22,healthGrowth:.07,maxTowerLevel:4},
  {id:'docks',legacyIndex:4,name:'Заброшенные доки',waves:24,healthGrowth:.085,maxTowerLevel:5},
 ];

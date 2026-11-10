@@ -1,0 +1,37 @@
+{
+  "reference_path": "artifacts\\campaign\\reference-390.png",
+  "candidate_path": "artifacts\\menu-review\\menu-390x608.png",
+  "reference_size": [
+    390,
+    608
+  ],
+  "candidate_original_size": [
+    390,
+    608
+  ],
+  "compared_size": [
+    390,
+    608
+  ],
+  "candidate_resized": false,
+  "metrics": {
+    "mean_abs_diff_per_channel": [
+      24.9147,
+      40.5684,
+      38.1984
+    ],
+    "rms_diff_per_channel": [
+      51.2765,
+      63.2918,
+      59.5978
+    ],
+    "mean_abs_diff": 34.5605,
+    "rms_diff": 58.0554,
+    "normalized_mean_abs_diff_pct": 13.5531,
+    "normalized_rms_diff_pct": 22.7668,
+    "pixel_threshold": 12,
+    "changed_pixels": 148135,
+    "total_pixels": 237120,
+    "changed_pixel_pct": 62.4726
+  }
+}
