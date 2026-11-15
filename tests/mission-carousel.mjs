@@ -27,7 +27,7 @@ for(const [width,height] of [[360,740],[390,844],[430,932]]){
  const initial=await page.evaluate(()=>{const l=document.querySelector('.map-select'),c=l.querySelector('.map-card');return {scroll:l.scrollLeft,scrollWidth:l.scrollWidth,clientWidth:l.clientWidth,cardWidth:c.getBoundingClientRect().width,docWidth:document.documentElement.scrollWidth,viewport:innerWidth,bar:getComputedStyle(l,'::-webkit-scrollbar').display,barWidth:getComputedStyle(l).scrollbarWidth}});
  assert.ok(initial.scrollWidth>initial.clientWidth);assert.ok(initial.cardWidth>=110);assert.ok(initial.docWidth<=width);assert.ok(initial.bar==='none'||initial.barWidth==='none');
  assert.equal(await page.locator('[data-map="0"]').getAttribute('aria-pressed'),'true');
- assert.equal(await page.locator('.map-select-wrap').evaluate(e=>getComputedStyle(e,'::after').opacity),'1');
+ await page.waitForFunction(()=>getComputedStyle(document.querySelector('.map-select-wrap'),'::after').opacity==='1');
  await swipe(page,-180);const scrolled=await page.locator('.map-select').evaluate(e=>e.scrollLeft);
  assert.ok(scrolled>10,`touch did not scroll at ${width}: ${scrolled}`);
  const snap=await page.locator('.map-select').evaluate(e=>({atEnd:e.scrollLeft+e.clientWidth>=e.scrollWidth-2,nearest:Math.min(...[...e.querySelectorAll('.map-card')].map(c=>Math.abs(c.getBoundingClientRect().left-e.getBoundingClientRect().left)))}));
@@ -36,14 +36,14 @@ for(const [width,height] of [[360,740],[390,844],[430,932]]){
  assert.equal(await page.locator('#map').count(),0,'swipe must not start battle');
  const position=await page.evaluate(()=>({x:scrollX,y:scrollY,doc:document.documentElement.scrollWidth,view:innerWidth}));
  assert.equal(position.x,0);assert.equal(position.y,0);assert.ok(position.doc<=position.view);
- assert.equal(await page.locator('.map-select-wrap').evaluate(e=>getComputedStyle(e,'::before').opacity),'1');
+ await page.waitForFunction(()=>getComputedStyle(document.querySelector('.map-select-wrap'),'::before').opacity==='1');
  await swipe(page,180);const reversed=await page.locator('.map-select').evaluate(e=>e.scrollLeft);
  assert.ok(reversed<scrolled-10,`swipe right moves towards first card: ${scrolled} → ${reversed}`);
  await page.locator('.map-select').evaluate(e=>e.scrollTo({left:0}));await page.waitForTimeout(400);
  await page.screenshot({path:`artifacts/carousel-review/menu-${width}x${height}.png`,animations:'disabled'});
  // The fifth card remains readable, can be selected and starts its own mission.
  await page.locator('[data-map="4"]').tap();assert.equal(await page.locator('[data-map="4"]').getAttribute('aria-pressed'),'true');await page.waitForTimeout(350);
- assert.equal(await page.locator('.map-select-wrap').evaluate(e=>getComputedStyle(e,'::after').opacity),'0');
+ await page.waitForFunction(()=>getComputedStyle(document.querySelector('.map-select-wrap'),'::after').opacity==='0');
  await page.locator('#play').tap();await page.locator('#map').waitFor();assert.match(await page.locator('.map-caption').innerText(),/СЕКТОР 05/);
  assert.deepEqual(errors,[]);console.log(`${width}x${height}: native touch, selection, edge indicators, overflow OK`);await context.close();
 }

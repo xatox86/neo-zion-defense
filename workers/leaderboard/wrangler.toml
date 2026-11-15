@@ -1,0 +1,14 @@
+name = "zion-survival-leaderboard"
+main = "src/index.mjs"
+compatibility_date = "2025-04-01"
+
+[vars]
+SEASON = "season-1"
+BALANCE_VERSION = "survival-v1"
+ALLOW_ORIGIN = "https://xatox86.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "zion-survival"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"

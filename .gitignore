@@ -1,2 +1,5 @@
 node_modules/
 dist/
+workers/leaderboard/.dev.vars*
+workers/leaderboard/.env*
+workers/leaderboard/.wrangler/

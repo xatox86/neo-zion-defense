@@ -14,7 +14,7 @@ export type SurvivalCheckpoint={version:1;wave:number;energy:number;health:numbe
 export type SurvivalRecord={reached:number;cleared:number;kills:number;bosses:number;elapsed:number;date:string};
 /** A record reports the reached wave separately from the last fully cleared wave. */
 export function updateSurvivalRecord(previous:SurvivalRecord|null,current:SurvivalRecord):SurvivalRecord {
- if(!previous||current.reached>previous.reached||(current.reached===previous.reached&&current.cleared>previous.cleared))return current;
+ if(!previous||current.cleared>previous.cleared||(current.cleared===previous.cleared&&current.reached>previous.reached))return current;
  return previous;
 }
 export function validSurvivalCheckpoint(value:unknown,padCount:number):value is SurvivalCheckpoint{
